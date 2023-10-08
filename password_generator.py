@@ -20,7 +20,7 @@ def generate_password(*, use_uppercase=True, use_lowercase=True, use_numbers=Tru
         allowed_symbols = '!@#$%^&*()_+-='
         chars.extend(allowed_symbols)
 
-    password = ''.join(random.choice(chars) for _ in range(length))
+    password = ''.join(random.choices(chars, k=length))
 
     return password
 
